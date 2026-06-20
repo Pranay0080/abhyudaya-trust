@@ -7,7 +7,6 @@ import {
   siteConfig,
   impactStats,
   initiatives,
-  impactStories,
   blogPosts,
 } from "@/lib/site-data";
 
@@ -58,53 +57,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* IMPACT STORIES */}
-      <section className="bg-ivory py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
-            <div>
-              <ThreadEyebrow label="Impact Stories" />
-              <h2 className="font-display text-3xl sm:text-4xl font-semibold max-w-xl">
-                Inspiring stories of change &amp; hope
-              </h2>
-            </div>
-            <Link
-              href="/impact-stories"
-              className="inline-flex items-center gap-2 font-semibold text-terracotta hover:text-terracotta-dark transition-colors shrink-0"
-            >
-              Discover More <ArrowRight size={16} />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
-            {impactStories.map((story, idx) => (
-              <Link
-                key={story.title}
-                href={story.href}
-                className={`group relative overflow-hidden rounded-2xl ${
-                  idx === 0 ? "sm:col-span-2 lg:col-span-2 lg:row-span-2" : ""
-                } ${idx === 0 ? "aspect-[4/5] sm:aspect-auto sm:h-full" : "aspect-[4/5]"}`}
-              >
-                <Image
-                  src={story.image}
-                  alt={story.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-pine/90 via-pine/10 to-transparent" />
-                <div className="absolute bottom-0 left-0 p-5">
-                  <h3 className="font-display text-lg sm:text-xl font-semibold text-ivory leading-snug">
-                    {story.title}
-                  </h3>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* MISSION + STATS */}
-      <section className="bg-sand py-20 sm:py-28">
+      <section className="bg-[#FFF4E6] py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center max-w-3xl mx-auto">
             <ThreadEyebrow label="Support Abhyudaya" align="center" />
@@ -130,50 +84,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* INITIATIVES */}
-      <section className="bg-ivory py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <ThreadEyebrow label="Our Initiatives" align="center" />
-            <h2 className="font-display text-3xl sm:text-4xl font-semibold">
-              Transforming lives through projects
-            </h2>
-          </div>
+    {/* INITIATIVES */}
+<section className="bg-ivory py-20 sm:py-28">
+  <div className="mx-auto max-w-7xl px-6">
+    <div className="text-center max-w-2xl mx-auto mb-14">
+      <ThreadEyebrow label="Our Initiatives" align="center" />
+      <h2 className="font-display text-3xl sm:text-4xl font-semibold">
+        Transforming lives through projects
+      </h2>
+    </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {initiatives.map((item) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="group flex flex-col rounded-2xl bg-white border border-pine/5 shadow-sm hover:shadow-lg transition-shadow overflow-hidden"
-              >
-                <div className="relative h-44 overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <span className="absolute top-4 left-4 font-data text-xs font-bold text-ivory bg-terracotta rounded-full px-3 py-1">
-                    {item.number}
-                  </span>
-                </div>
-                <div className="p-5 flex flex-col flex-1">
-                  <h3 className="font-display text-lg font-semibold leading-snug mb-2 group-hover:text-terracotta transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-pine/65 leading-relaxed flex-1">
-                    {item.description}
-                  </p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-terracotta">
-                    Learn more <ArrowRight size={14} />
-                  </span>
-                </div>
-              </Link>
-            ))}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {initiatives.slice(0, 4).map((item) => (
+        <Link
+          key={item.title}
+          href={item.href}
+          className="group flex flex-col rounded-2xl bg-white border border-pine/5 shadow-sm hover:shadow-xl hover:border-terracotta/30 transition-all duration-300 overflow-hidden"
+        >
+          <div className="relative h-44 overflow-hidden">
+            <Image
+              src={item.image}
+              alt={item.title}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <span className="absolute top-4 left-4 font-data text-xs font-bold text-ivory bg-terracotta rounded-full px-3 py-1">
+              {item.number}
+            </span>
           </div>
-        </div>
-      </section>
+          <div className="p-5 flex flex-col flex-1">
+            <h3 className="font-display text-lg font-semibold leading-snug mb-2 group-hover:text-terracotta transition-colors">
+              {item.title}
+            </h3>
+            <p className="text-sm text-pine/65 leading-relaxed flex-1">
+              {item.description}
+            </p>
+          </div>
+        </Link>
+      ))}
+    </div>
+
+    <div className="text-center mt-10">
+      <Link
+        href="/initiatives"
+        className="inline-flex items-center gap-2 rounded-full border-2 border-terracotta text-terracotta px-7 py-3 font-semibold hover:bg-terracotta hover:text-ivory transition-colors"
+      >
+        See All Initiatives <ArrowRight size={16} />
+      </Link>
+    </div>
+  </div>
+</section>
 
       {/* DONATE CTA */}
       <section className="bg-pine text-ivory py-20 sm:py-28">
@@ -215,47 +175,57 @@ export default function Home() {
         </div>
       </section>
 
-      {/* BLOG */}
-      <section className="bg-ivory py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <ThreadEyebrow label="Blog &amp; News" align="center" />
-            <h2 className="font-display text-3xl sm:text-4xl font-semibold">
-              Insights from Abhyudaya Trust
-            </h2>
-          </div>
+     
+     {/* BLOG */}
+<section className="bg-ivory py-20 sm:py-28">
+  <div className="mx-auto max-w-7xl px-6">
+    <div className="text-center max-w-2xl mx-auto mb-14">
+      <ThreadEyebrow label="Blog &amp; News" align="center" />
+      <h2 className="font-display text-3xl sm:text-4xl font-semibold">
+        Insights from Abhyudaya Trust
+      </h2>
+    </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {blogPosts.map((post) => (
-              <Link
-                key={post.title}
-                href={post.href}
-                className="group rounded-2xl overflow-hidden bg-white border border-pine/5 shadow-sm hover:shadow-lg transition-shadow"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-display text-base font-semibold leading-snug mb-3 group-hover:text-terracotta transition-colors">
-                    {post.title}
-                  </h3>
-                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-terracotta">
-                    Read More <ArrowRight size={14} />
-                  </span>
-                </div>
-              </Link>
-            ))}
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      {blogPosts.slice(0, 3).map((post) => (
+        <Link
+          key={post.title}
+          href={`/blog/${post.slug}`}
+          className="group rounded-2xl overflow-hidden bg-white border border-pine/5 shadow-sm hover:shadow-xl hover:border-terracotta/30 transition-all duration-300"
+        >
+          <div className="relative h-48 overflow-hidden">
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+            />
           </div>
-        </div>
-      </section>
+          <div className="p-5">
+            <h3 className="font-display text-base font-semibold leading-snug mb-3 group-hover:text-terracotta transition-colors">
+              {post.title}
+            </h3>
+            <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-terracotta">
+              Read More <ArrowRight size={14} />
+            </span>
+          </div>
+        </Link>
+      ))}
+    </div>
+
+    <div className="text-center mt-10">
+      <Link
+        href="/blog"
+        className="inline-flex items-center gap-2 rounded-full border-2 border-terracotta text-terracotta px-7 py-3 font-semibold hover:bg-terracotta hover:text-ivory transition-colors"
+      >
+        Explore All Articles <ArrowRight size={16} />
+      </Link>
+    </div>
+  </div>
+</section>
 
       {/* SCHOLARSHIP */}
-      <section className="bg-sand py-20 sm:py-28">
+      <section className="bg-[#FFF4E6] py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -271,23 +241,29 @@ export default function Home() {
                 expenses.
               </p>
               <Link
-                href="/scholarship-form"
+                href="/scheme-form"
                 className="inline-flex items-center gap-2 rounded-full bg-terracotta text-ivory px-7 py-4 font-semibold tracking-wide hover:bg-terracotta-dark transition-colors"
               >
                 Apply Now <ArrowRight size={18} />
               </Link>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-2xl bg-white p-6 flex flex-col items-center text-center shadow-sm">
-                <GraduationCap className="text-terracotta mb-3" size={32} />
+              <div className="rounded-2xl bg-white p-6 flex flex-col items-center text-center shadow-sm border border-terracotta/10 hover:border-terracotta/30 hover:shadow-md transition-all">
+                <div className="mb-3 bg-terracotta/10 rounded-full p-3">
+                  <GraduationCap className="text-terracotta" size={28} />
+                </div>
                 <p className="font-display font-semibold">Tuition Support</p>
               </div>
-              <div className="rounded-2xl bg-white p-6 flex flex-col items-center text-center shadow-sm">
-                <Stethoscope className="text-terracotta mb-3" size={32} />
+              <div className="rounded-2xl bg-white p-6 flex flex-col items-center text-center shadow-sm border border-terracotta/10 hover:border-terracotta/30 hover:shadow-md transition-all">
+                <div className="mb-3 bg-terracotta/10 rounded-full p-3">
+                  <Stethoscope className="text-terracotta" size={28} />
+                </div>
                 <p className="font-display font-semibold">Healthcare Access</p>
               </div>
-              <div className="col-span-2 rounded-2xl bg-white p-6 flex flex-col items-center text-center shadow-sm">
-                <Heart className="text-terracotta mb-3" size={32} />
+              <div className="col-span-2 rounded-2xl bg-white p-6 flex flex-col items-center text-center shadow-sm border border-terracotta/10 hover:border-terracotta/30 hover:shadow-md transition-all">
+                <div className="mb-3 bg-terracotta/10 rounded-full p-3">
+                  <Heart className="text-terracotta" size={28} />
+                </div>
                 <p className="font-display font-semibold">
                   Community-driven Support for Meritorious Students
                 </p>

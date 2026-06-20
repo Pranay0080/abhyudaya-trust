@@ -55,7 +55,7 @@ export default function StatCounter({ value, label }: StatProps) {
 
   return (
     <div ref={ref} className="text-center px-4">
-      <p className="font-data text-4xl sm:text-5xl font-bold text-terracotta">
+      <p className="font-data text-4xl sm:text-5xl font-bold text-terracotta drop-shadow-sm">
         {count.toLocaleString("en-IN")}
         {suffix}
       </p>

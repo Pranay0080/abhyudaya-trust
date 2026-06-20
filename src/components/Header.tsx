@@ -12,9 +12,9 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 bg-ivory/95 backdrop-blur-sm border-b border-pine/10">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-pine/10 shadow-sm">
       {/* Top info bar */}
-      <div className="hidden lg:block bg-pine text-ivory/90">
+      <div className="hidden lg:block bg-pine text-white">
         <div className="mx-auto max-w-7xl px-6 flex items-center justify-between text-sm py-2">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2">
@@ -44,13 +44,13 @@ export default function Header() {
       {/* Main nav */}
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center gap-3 group shrink-0">
-            <div className="relative h-10 sm:h-12 w-32 sm:w-40 shrink-0">
+          <Link href="/" className="flex items-center gap-4 group shrink-0">
+            <div className="relative h-14 w-14 shrink-0">
               <Image
-                src="/logo.png"
+                src="/abhyudayalogo.png"
                 alt="Abhyudaya Jan Kalyan Nyas logo"
                 fill
-                className="object-contain object-left"
+                className="object-contain"
                 priority
               />
             </div>
@@ -115,7 +115,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden border-t border-pine/10 bg-ivory">
+        <div className="lg:hidden border-t border-pine/10 bg-white">
           <nav className="flex flex-col px-6 py-4 gap-1 font-medium">
             {navLinks.map((link) => {
               const isActive =

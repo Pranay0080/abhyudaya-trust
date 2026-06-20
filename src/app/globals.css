@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --color-ivory: #FBF6EE;
-  --color-sand: #EFE3D3;
-  --color-terracotta: #C75D3A;
-  --color-terracotta-dark: #A8472A;
-  --color-pine: #1F3A35;
-  --color-pine-light: #2E5048;
-  --color-gold: #E8A23D;
+  /* ── New vibrant palette ── */
+  --color-ivory: #FFFFFF;                /* pure white background */
+  --color-sand: #FFF4E6;                 /* warm tinted sections */
+  --color-terracotta: #F05A1A;           /* vivid saffron-orange CTA */
+  --color-terracotta-dark: #C94510;      /* hover state */
+  --color-pine: #0F2B3D;                 /* deep navy-teal body text */
+  --color-pine-light: #1A4159;           /* lighter shade */
+  --color-gold: #FFB830;                 /* bright amber accent */
 
   --font-display: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

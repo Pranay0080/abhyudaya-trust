@@ -3,7 +3,7 @@ export const siteConfig = {
   shortName: "Abhyudaya Trust",
   tagline:
     '"I slept and dreamt that life was joy. I awoke and saw that life was service. I acted and behold, service was joy" — Rabindranath Tagore',
-  address: "453/12 Vishnu Nagar, Gohana, Sonipat, Haryana",
+  address: "Abhyudaya Aarogya Kendra, Gohana",
   email: "info@abhyudayatrust.org",
   phone: "+91 857-182-0670",
   phoneHref: "tel:+918571820670",
@@ -26,9 +26,9 @@ export const navLinks = [
 export const impactStats = [
   { value: "10+", label: "Students Supported", suffixWord: "Students" },
   { value: "1000+", label: "Volunteers Engaged" },
-  { value: "14000+", label: "Spectacles Distributed" },
+  { value: "15000+", label: "Spectacles Distributed" },
   { value: "5+", label: "Heart Surgeries Funded" },
-  { value: "350+", label: "Dentures Distributed" },
+  { value: "450+", label: "Dentures Distributed" },
   { value: "500+", label: "Health Camps Held" },
 ];
 
@@ -130,18 +130,21 @@ export const impactStories = [
 export const blogPosts = [
   {
     title: "The Great Degeneration — How Institutions Decay and Economies Die",
-    image: "https://abhyudayatrust.org/assets/img/president.png",
+    image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200&q=80",
     href: "/blog/the-great-degeneration",
+     slug: "the-great-degeneration"
   },
   {
     title: "Dhanvantari Sewa Yatra — Dr Yogender Malik",
-    image: "https://abhyudayatrust.org/assets/img/about/STORY.jpg",
+    image: "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=1200&q=80",
     href: "/blog/dhanvantari-sewa-yatra",
+      slug: "dhanvantari-sewa-yatra"
   },
   {
     title: "Shaheed Bhagat Singh — The Star of India's Freedom Struggle",
-    image: "https://abhyudayatrust.org/assets/img/blog/img3.jpg",
+    image: "https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=1200&q=80",
     href: "/blog/shaheed-bhagat-singh",
+        slug: "shaheed-bhagat-singh",
   },
 ];
 
@@ -166,7 +169,6 @@ export const footerLinks = {
   ],
   support: [
     { label: "Impact Stories", href: "/impact-stories" },
-    { label: "Get Involved", href: "/get-involved" },
     { label: "Contact Us", href: "/contact" },
     { label: "Donate Now", href: "donate" },
   ],

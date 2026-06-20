@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         hostname: "abhyudayatrust.org",
         pathname: "/assets/**",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
     ],
   },
 };

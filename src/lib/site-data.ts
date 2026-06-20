@@ -159,13 +159,10 @@ export const footerLinks = {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     { label: "Our Initiatives", href: "/initiatives" },
-    { label: "Blog", href: "/blog" },
+    
   ],
   mediaResources: [
-    { label: "Press Releases", href: "#" },
-    { label: "News Coverage", href: "#" },
-    { label: "Annual Reports & Downloads", href: "#" },
-    { label: "Photo & Video Gallery", href: "/gallery" },
+    { label: "Blog", href: "/blog" },
   ],
   support: [
     { label: "Impact Stories", href: "/impact-stories" },

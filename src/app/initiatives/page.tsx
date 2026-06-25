@@ -14,21 +14,19 @@ export default function InitiativesPage() {
   return (
     <>
       {/* HEADER */}
-   <section className="relative overflow-hidden text-ivory">
-  {/* Unsplash background image */}
+{/* HEADER */}
+<section className="relative overflow-hidden text-ivory">
   <div className="absolute inset-0 z-0">
     <Image
-      src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600&q=80&fit=crop"
-      alt="Volunteers serving the community"
+      src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1600&q=80&fit=crop"
+      alt="Community initiative in action"
       fill
       className="object-cover"
       priority
     />
-    {/* Dark overlay so text stays legible */}
-    <div className="absolute inset-0 bg-pine/80" />
+    <div className="absolute inset-0 bg-pine/65" />
   </div>
 
-  {/* Decorative circles */}
   <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-terracotta/10 pointer-events-none z-10" />
   <div className="absolute bottom-0 left-1/3 w-48 h-48 rounded-full bg-gold/5 pointer-events-none z-10" />
 
@@ -38,15 +36,14 @@ export default function InitiativesPage() {
       <ChevronRight size={14} />
       <span className="text-gold">Our Initiatives</span>
     </div>
-     <ThreadEyebrow label="What We Do" light />
-          <h1 className="font-display text-4xl sm:text-5xl font-semibold mt-2 max-w-2xl leading-tight">
-            Our Initiatives
-          </h1>
-          <p className="mt-4 text-ivory/60 max-w-xl leading-relaxed">
-            Nine focused programmes addressing healthcare, education and social
-            welfare across Haryana and beyond.
-          </p>
- 
+    <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.05] max-w-2xl">
+      Nine ways we{" "}
+      <span className="text-gold italic">serve.</span>
+    </h1>
+    <p className="mt-6 text-ivory/75 text-lg max-w-xl leading-relaxed">
+      Nine focused programmes addressing healthcare, education and social
+      welfare across Haryana and beyond.
+    </p>
   </div>
 </section>
 

@@ -25,21 +25,19 @@ export default function AboutPage() {
   return (
     <>
       {/* PAGE HEADER */}
+{/* PAGE HEADER */}
 <section className="relative overflow-hidden text-ivory">
-  {/* Unsplash background image */}
   <div className="absolute inset-0 z-0">
     <Image
-      src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600&q=80&fit=crop"
+      src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1600&q=80&fit=crop"
       alt="Volunteers serving the community"
       fill
       className="object-cover"
       priority
     />
-    {/* Dark overlay so text stays legible */}
-    <div className="absolute inset-0 bg-pine/80" />
+    <div className="absolute inset-0 bg-pine/65" />
   </div>
 
-  {/* Decorative circles */}
   <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-terracotta/10 pointer-events-none z-10" />
   <div className="absolute bottom-0 left-1/3 w-48 h-48 rounded-full bg-gold/5 pointer-events-none z-10" />
 
@@ -58,7 +56,6 @@ export default function AboutPage() {
       communities across Sonipat, Haryana — through healthcare, education, and
       the belief that every life deserves dignity.
     </p>
- 
   </div>
 </section>
 

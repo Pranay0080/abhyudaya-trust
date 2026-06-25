@@ -3,7 +3,7 @@
 :root {
   /* ── New vibrant palette ── */
   --color-ivory: #FFFFFF;                /* pure white background */
-  --color-sand: #FFF4E6;                 /* warm tinted sections */
+  --color-sand: #FFFFFF;                 /* warm tinted sections */
   --color-terracotta: #F05A1A;           /* vivid saffron-orange CTA */
   --color-terracotta-dark: #C94510;      /* hover state */
   --color-pine: #0F2B3D;                 /* deep navy-teal body text */

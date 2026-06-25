@@ -14,48 +14,48 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-pine text-ivory">
-        <div className="absolute inset-0">
-          <Image
-            src="https://abhyudayatrust.org/assets/img/about/story-2.jpg"
-            alt=""
-            fill
-            priority
-            className="object-cover opacity-25"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-pine via-pine/90 to-pine/60" />
-        </div>
+     {/* HERO */}
+<section className="relative overflow-hidden text-pine min-h-[calc(100vh-220px)] flex items-center py-16">
+  <div className="absolute inset-0">
+    <Image
+      src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1920&q=80"
+      alt=""
+      fill
+      priority
+      className="object-cover"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-amber-50/90 via-orange-50/80 to-yellow-50/60" />
+  </div>
 
-        <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:py-36">
-          <div className="max-w-3xl">
-            <ThreadEyebrow label="Abhyudaya Jan Kalyan Nyas" light />
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.1]">
-              Service is joy — building brighter
-              <span className="text-gold italic"> futures</span> in Sonipat
-              and beyond.
-            </h1>
-            <p className="mt-6 text-lg text-ivory/80 max-w-2xl leading-relaxed">
-              {siteConfig.tagline}
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href={siteConfig.donateUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-terracotta px-7 py-4 font-semibold tracking-wide hover:bg-terracotta-dark transition-colors"
-              >
-                Donate Now <Heart size={18} />
-              </a>
-              <Link
-                href="/initiatives"
-                className="inline-flex items-center gap-2 rounded-full border border-ivory/30 px-7 py-4 font-semibold tracking-wide hover:bg-ivory/10 transition-colors"
-              >
-                Our Initiatives <ArrowRight size={18} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="relative mx-auto max-w-7xl px-6 w-full">
+    <div className="max-w-3xl">
+      <ThreadEyebrow label="Abhyudaya Jan Kalyan Nyas" />
+      <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.1] text-pine">
+        Service is joy — building brighter
+        <span className="text-terracotta italic"> futures</span> in community.
+      </h1>
+      <p className="mt-6 text-lg text-pine/75 max-w-2xl leading-relaxed">
+        {siteConfig.tagline}
+      </p>
+      <div className="mt-10 flex flex-wrap gap-4">
+        
+         <a href={siteConfig.donateUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full bg-terracotta text-ivory px-7 py-4 font-semibold tracking-wide hover:bg-terracotta-dark transition-colors"
+        >
+          Donate Now <Heart size={18} />
+        </a>
+        <Link
+          href="/initiatives"
+          className="inline-flex items-center gap-2 rounded-full border-2 border-pine text-pine px-7 py-4 font-semibold tracking-wide hover:bg-pine hover:text-ivory transition-colors"
+        >
+          Our Initiatives <ArrowRight size={18} />
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* MISSION + STATS */}
       <section className="bg-[#FFF4E6] py-20 sm:py-28">

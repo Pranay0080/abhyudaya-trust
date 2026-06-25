@@ -29,7 +29,7 @@ export default function AboutPage() {
 <section className="relative overflow-hidden text-ivory">
   <div className="absolute inset-0 z-0">
     <Image
-      src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1600&q=80&fit=crop"
+      src="/about1.png"
       alt="Volunteers serving the community"
       fill
       className="object-cover"
@@ -66,9 +66,17 @@ export default function AboutPage() {
             {/* Left: decorative typographic block */}
             <div className="relative">
               <div className="rounded-3xl bg-[#FFF4E6] border border-terracotta/15 p-10 sm:p-14">
-                <p className="font-display text-6xl sm:text-8xl font-bold text-terracotta/15 leading-none select-none mb-6">
-                  अभ्युदय
-                </p>
+             <div className="flex items-center gap-4 mb-6">
+  <img
+    src="/abhyudayalogo.png"
+    alt="Abhyudaya Logo"
+    className="w-16 h-16 sm:w-20 sm:h-20 object-contain flex-shrink-0"
+  />
+
+  <p className="font-display text-6xl sm:text-8xl font-bold text-terracotta/15 leading-none select-none">
+    अभ्युदय
+  </p>
+</div>
                 <p className="font-display text-2xl sm:text-3xl font-semibold text-pine leading-snug">
                   "Upliftment through dedicated service to the underprivileged."
                 </p>

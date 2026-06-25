@@ -18,7 +18,7 @@ export default function InitiativesPage() {
 <section className="relative overflow-hidden text-ivory">
   <div className="absolute inset-0 z-0">
     <Image
-      src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1600&q=80&fit=crop"
+      src="/init3.png"
       alt="Community initiative in action"
       fill
       className="object-cover"

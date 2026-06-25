@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ChevronRight, Mail, MapPin, Phone } from "lucide-react";
 import ThreadEyebrow from "@/components/ThreadEyebrow";
 import { siteConfig } from "@/lib/site-data";
+import Image from "next/image";
 
 export const metadata = {
   title: "Contact Us | Abhyudaya Jan Kalyan Nyas",
@@ -12,20 +13,39 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-pine text-ivory">
-        <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20">
-          <h1 className="font-display text-4xl sm:text-5xl font-semibold">
-            Contact Us
-          </h1>
-          <div className="mt-4 flex items-center gap-2 text-sm text-ivory/70">
-            <Link href="/" className="hover:text-gold transition-colors">
-              Home
-            </Link>
-            <ChevronRight size={14} />
-            <span className="text-gold">Contact Us</span>
-          </div>
-        </div>
-      </section>
+   <section className="relative overflow-hidden text-ivory">
+  <div className="absolute inset-0 z-0">
+    <Image
+      src="/contactpage.png"
+      alt="Community initiative in action"
+      fill
+      className="object-cover"
+      priority
+    />
+    <div className="absolute inset-0 bg-pine/65" />
+  </div>
+
+  <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-terracotta/10 pointer-events-none z-10" />
+  <div className="absolute bottom-0 left-1/3 w-48 h-48 rounded-full bg-gold/5 pointer-events-none z-10" />
+
+  <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 sm:py-32">
+    <div className="flex items-center gap-2 text-sm text-ivory/50 mb-6">
+      <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+      <ChevronRight size={14} />
+      <span className="text-gold">Contact Us</span>
+    </div>
+   <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.05] max-w-2xl">
+  Let's <span className="text-gold italic">connect.</span>
+</h1>
+
+<p className="mt-6 text-ivory/75 text-lg max-w-xl leading-relaxed">
+  Whether you want to volunteer, support a cause, partner with us, or learn
+  more about our initiatives, we would love to hear from you. Together, we can
+  create meaningful change and build brighter futures for those who need it
+  most.
+</p>
+  </div>
+</section>
 
       <section className="bg-ivory py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-6">

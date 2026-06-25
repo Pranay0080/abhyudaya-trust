@@ -14,14 +14,31 @@ export default function InitiativesPage() {
   return (
     <>
       {/* HEADER */}
-      <section className="bg-pine text-ivory">
-        <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20">
-          <div className="flex items-center gap-2 text-sm text-ivory/50 mb-6">
-            <Link href="/" className="hover:text-gold transition-colors">Home</Link>
-            <ChevronRight size={14} />
-            <span className="text-gold">Our Initiatives</span>
-          </div>
-          <ThreadEyebrow label="What We Do" light />
+   <section className="relative overflow-hidden text-ivory">
+  {/* Unsplash background image */}
+  <div className="absolute inset-0 z-0">
+    <Image
+      src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600&q=80&fit=crop"
+      alt="Volunteers serving the community"
+      fill
+      className="object-cover"
+      priority
+    />
+    {/* Dark overlay so text stays legible */}
+    <div className="absolute inset-0 bg-pine/80" />
+  </div>
+
+  {/* Decorative circles */}
+  <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-terracotta/10 pointer-events-none z-10" />
+  <div className="absolute bottom-0 left-1/3 w-48 h-48 rounded-full bg-gold/5 pointer-events-none z-10" />
+
+  <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 sm:py-32">
+    <div className="flex items-center gap-2 text-sm text-ivory/50 mb-6">
+      <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+      <ChevronRight size={14} />
+      <span className="text-gold">Our Initiatives</span>
+    </div>
+     <ThreadEyebrow label="What We Do" light />
           <h1 className="font-display text-4xl sm:text-5xl font-semibold mt-2 max-w-2xl leading-tight">
             Our Initiatives
           </h1>
@@ -29,8 +46,9 @@ export default function InitiativesPage() {
             Nine focused programmes addressing healthcare, education and social
             welfare across Haryana and beyond.
           </p>
-        </div>
-      </section>
+ 
+  </div>
+</section>
 
       {/* GRID */}
       <section className="bg-white py-16 sm:py-24">

@@ -25,25 +25,42 @@ export default function AboutPage() {
   return (
     <>
       {/* PAGE HEADER */}
-      <section className="bg-pine text-ivory relative overflow-hidden">
-        {/* Decorative circles */}
-        <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-terracotta/10 pointer-events-none" />
-        <div className="absolute bottom-0 left-1/3 w-48 h-48 rounded-full bg-gold/5 pointer-events-none" />
-        <div className="relative mx-auto max-w-7xl px-6 py-20 sm:py-28">
-          <div className="flex items-center gap-2 text-sm text-ivory/50 mb-6">
-            <Link href="/" className="hover:text-gold transition-colors">Home</Link>
-            <ChevronRight size={14} />
-            <span className="text-gold">About Us</span>
-          </div>
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.05] max-w-2xl">
-            Service is{" "}
-            <span className="text-gold italic">joy.</span>
-          </h1>
-          <p className="mt-6 text-ivory/70 text-lg max-w-xl leading-relaxed">
-            Abhyudaya Jan Kalyan Nyas — grooming talent and uplifting communities in Sonipat, Haryana since our founding.
-          </p>
-        </div>
-      </section>
+<section className="relative overflow-hidden text-ivory">
+  {/* Unsplash background image */}
+  <div className="absolute inset-0 z-0">
+    <Image
+      src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600&q=80&fit=crop"
+      alt="Volunteers serving the community"
+      fill
+      className="object-cover"
+      priority
+    />
+    {/* Dark overlay so text stays legible */}
+    <div className="absolute inset-0 bg-pine/80" />
+  </div>
+
+  {/* Decorative circles */}
+  <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-terracotta/10 pointer-events-none z-10" />
+  <div className="absolute bottom-0 left-1/3 w-48 h-48 rounded-full bg-gold/5 pointer-events-none z-10" />
+
+  <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 sm:py-32">
+    <div className="flex items-center gap-2 text-sm text-ivory/50 mb-6">
+      <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+      <ChevronRight size={14} />
+      <span className="text-gold">About Us</span>
+    </div>
+    <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.05] max-w-2xl">
+      Rooted in{" "}
+      <span className="text-gold italic">compassion.</span>
+    </h1>
+    <p className="mt-6 text-ivory/75 text-lg max-w-xl leading-relaxed">
+      For over a decade, Abhyudaya Jan Kalyan Nyas has been serving underprivileged
+      communities across Sonipat, Haryana — through healthcare, education, and
+      the belief that every life deserves dignity.
+    </p>
+ 
+  </div>
+</section>
 
       {/* OUR STORY */}
       <section className="bg-white py-20 sm:py-28">

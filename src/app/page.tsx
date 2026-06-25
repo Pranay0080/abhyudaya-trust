@@ -14,7 +14,6 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-     {/* HERO */}
 <section className="relative overflow-hidden text-pine min-h-[calc(100vh-220px)] flex items-center py-16">
   <div className="absolute inset-0">
     <Image
@@ -57,32 +56,7 @@ export default function Home() {
   </div>
 </section>
 
-      {/* MISSION + STATS */}
-      <section className="bg-[#FFF4E6] py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <ThreadEyebrow label="Support Abhyudaya" align="center" />
-            <h2 className="font-display text-3xl sm:text-4xl font-semibold">
-              Where hope and learning create brighter futures
-            </h2>
-            <p className="mt-6 text-pine/75 leading-relaxed">
-              Abhyudaya Jan Kalyan Nyas works tirelessly to uplift
-              underprivileged communities through education, healthcare and
-              social welfare programs. Your support helps us train talented
-              individuals, provide essential services and create
-              opportunities for those who need it most. Together, we can
-              build a society where every child and family has access to a
-              better future.
-            </p>
-          </div>
-
-          <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-10 gap-x-4">
-            {impactStats.map((stat) => (
-              <StatCounter key={stat.label} value={stat.value} label={stat.label} />
-            ))}
-          </div>
-        </div>
-      </section>
+    
 
     {/* INITIATIVES */}
 <section className="bg-ivory py-20 sm:py-28">
@@ -134,46 +108,33 @@ export default function Home() {
     </div>
   </div>
 </section>
-
-      {/* DONATE CTA */}
-      <section className="bg-pine text-ivory py-20 sm:py-28">
+  {/* MISSION + STATS */}
+      <section className="bg-[#FFF4E6] py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-72 sm:h-96 rounded-2xl overflow-hidden">
-              <Image
-                src="https://abhyudayatrust.org/assets/img/howwork/1.jpg"
-                alt="Volunteers supporting a community health camp"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div>
-              <ThreadEyebrow label="Make a Donation" light />
-              <h2 className="font-display text-3xl sm:text-4xl font-semibold mb-6">
-                Support a cause today
-              </h2>
-              <p className="text-ivory/75 leading-relaxed mb-8">
-                Your contribution can make a profound difference in the lives
-                of those who need it most. By supporting our programs, you
-                help provide access to quality education for underprivileged
-                children, ensure essential healthcare reaches vulnerable
-                communities, and promote sustainable development that
-                strengthens local communities. Every donation — big or small
-                — creates a ripple of positive change that lasts for
-                generations.
-              </p>
-              <a
-                href={siteConfig.donateUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-terracotta px-7 py-4 font-semibold tracking-wide hover:bg-terracotta-dark transition-colors"
-              >
-                Donate Now <Heart size={18} />
-              </a>
-            </div>
+          <div className="text-center max-w-3xl mx-auto">
+            <ThreadEyebrow label="Support Abhyudaya" align="center" />
+            <h2 className="font-display text-3xl sm:text-4xl font-semibold">
+              Where hope and learning create brighter futures
+            </h2>
+            <p className="mt-6 text-pine/75 leading-relaxed">
+              Abhyudaya Jan Kalyan Nyas works tirelessly to uplift
+              underprivileged communities through education, healthcare and
+              social welfare programs. Your support helps us train talented
+              individuals, provide essential services and create
+              opportunities for those who need it most. Together, we can
+              build a society where every child and family has access to a
+              better future.
+            </p>
+          </div>
+
+          <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-10 gap-x-4">
+            {impactStats.map((stat) => (
+              <StatCounter key={stat.label} value={stat.value} label={stat.label} />
+            ))}
           </div>
         </div>
       </section>
+    
 
      
      {/* BLOG */}
@@ -223,7 +184,45 @@ export default function Home() {
     </div>
   </div>
 </section>
-
+  {/* DONATE CTA */}
+      <section className="bg-pine text-ivory py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative h-72 sm:h-96 rounded-2xl overflow-hidden">
+              <Image
+                src="https://abhyudayatrust.org/assets/img/howwork/1.jpg"
+                alt="Volunteers supporting a community health camp"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <ThreadEyebrow label="Make a Donation" light />
+              <h2 className="font-display text-3xl sm:text-4xl font-semibold mb-6">
+                Support a cause today
+              </h2>
+              <p className="text-ivory/75 leading-relaxed mb-8">
+                Your contribution can make a profound difference in the lives
+                of those who need it most. By supporting our programs, you
+                help provide access to quality education for underprivileged
+                children, ensure essential healthcare reaches vulnerable
+                communities, and promote sustainable development that
+                strengthens local communities. Every donation — big or small
+                — creates a ripple of positive change that lasts for
+                generations.
+              </p>
+              <a
+                href={siteConfig.donateUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-terracotta px-7 py-4 font-semibold tracking-wide hover:bg-terracotta-dark transition-colors"
+              >
+                Donate Now <Heart size={18} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* SCHOLARSHIP */}
       <section className="bg-[#FFF4E6] py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-6">

@@ -3,6 +3,7 @@ import { ChevronRight, Mail, MapPin, Phone } from "lucide-react";
 import ThreadEyebrow from "@/components/ThreadEyebrow";
 import { siteConfig } from "@/lib/site-data";
 import Image from "next/image";
+import ContactForm from "../../components/ContactForm";
 
 export const metadata = {
   title: "Contact Us | Abhyudaya Jan Kalyan Nyas",
@@ -105,65 +106,7 @@ export default function ContactPage() {
 
             {/* Form */}
             <div className="bg-white rounded-2xl shadow-sm p-6 sm:p-10">
-              <form className="grid sm:grid-cols-2 gap-5">
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="name" className="text-sm font-semibold">
-                    Full name
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    placeholder="Your name"
-                    className="rounded-xl border border-pine/15 bg-ivory px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-terracotta"
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="email" className="text-sm font-semibold">
-                    Email address
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    placeholder="you@example.com"
-                    className="rounded-xl border border-pine/15 bg-ivory px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-terracotta"
-                  />
-                </div>
-                <div className="flex flex-col gap-2 sm:col-span-2">
-                  <label htmlFor="subject" className="text-sm font-semibold">
-                    Subject
-                  </label>
-                  <input
-                    id="subject"
-                    name="subject"
-                    type="text"
-                    placeholder="How can we help?"
-                    className="rounded-xl border border-pine/15 bg-ivory px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-terracotta"
-                  />
-                </div>
-                <div className="flex flex-col gap-2 sm:col-span-2">
-                  <label htmlFor="message" className="text-sm font-semibold">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    required
-                    placeholder="Write your message here..."
-                    className="rounded-xl border border-pine/15 bg-ivory px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-terracotta resize-none"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="sm:col-span-2 inline-flex items-center justify-center rounded-full bg-terracotta text-ivory font-semibold px-7 py-4 tracking-wide hover:bg-terracotta-dark transition-colors"
-                >
-                  Send Message
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
 

@@ -8,7 +8,7 @@ export const siteConfig = {
   phone: "+91 857-182-0670",
   phoneHref: "tel:+918571820670",
   donateUrl:
-    "https://razorpay.com/payment-button/pl_K14WzDNuDgdtYs/view/?utm_source=payment_button&utm_medium=button&utm_campaign=payment_button",
+    "/donate",
   social: {
     facebook: "https://www.facebook.com/abhyudayaMission/",
     twitter: "https://x.com/bharatabhyudaya",
@@ -149,11 +149,22 @@ export const blogPosts = [
 ];
 
 export const partners = [
-  "https://abhyudayatrust.org/assets/img/partner/1.jpg",
-  "https://abhyudayatrust.org/assets/img/partner/2.jpg",
-  "https://abhyudayatrust.org/assets/img/partner/3.jpg",
+  {
+    name: "National Medicos Organisation",
+    image: "https://abhyudayatrust.org/assets/img/partner/1.jpg",
+    url: "http://www.nationalmedicosorganisation.org/"
+  },
+  {
+    name: "Swami Vivekanand,Health Mission Society",
+    image: "https://abhyudayatrust.org/assets/img/partner/2.jpg",
+    url: "https://www.svhms.org/"
+  },
+  {
+    name: "Bhaorao Deoras Seva Nyas",
+    image: "https://abhyudayatrust.org/assets/img/partner/3.jpg",
+    url: "https://bdsn.co.in/"
+  },
 ];
-
 export const footerLinks = {
   quickLinks: [
     { label: "Home", href: "/" },

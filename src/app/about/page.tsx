@@ -278,21 +278,24 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            {partners.map((src, idx) => (
-              <div
-                key={idx}
-                className="relative h-28 sm:h-32 bg-white rounded-2xl border border-pine/10 shadow-sm overflow-hidden flex items-center justify-center p-6 hover:border-terracotta/30 hover:shadow-lg transition-all duration-300"
-              >
-                <Image
-                  src={src}
-                  alt={`Partner organisation ${idx + 1}`}
-                  fill
-                  className="object-contain p-4"
-                />
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+  {partners.map((partner, idx) => (
+    <a
+      key={idx}
+      href={partner.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="relative h-28 sm:h-32 bg-white rounded-2xl border border-pine/10 shadow-sm overflow-hidden flex items-center justify-center p-6 hover:border-terracotta/30 hover:shadow-lg transition-all duration-300"
+   >
+      <Image
+        src={partner.image}
+        alt={partner.name}
+        fill
+        className="object-contain p-4"
+      />
+    </a>
+  ))}
+</div>
         </div>
       </section>
 

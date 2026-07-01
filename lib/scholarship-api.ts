@@ -1,9 +1,22 @@
+export type SchoolEntry = {
+  school: string;
+  yearOfPassing: string;
+  percentage: string;
+};
+
+export type ReferenceEntry = {
+  name: string;
+  relationship: string;
+  homePhone: string;
+  workPhone: string;
+};
+
 export type ScholarshipFormData = {
   fullName: string;
   dateOfBirth: string;
   isIndianCitizen: string;
   gender: string;
-  schools: { school: string; yearOfPassing: string; percentage: string }[];
+  schools: SchoolEntry[];
   courseDetails: string;
   courseCompletionDate: string;
   extracurricular: string;
@@ -13,7 +26,7 @@ export type ScholarshipFormData = {
   motherName: string;
   motherOccupation: string;
   familyIncome: string;
-  references: { name: string; relationship: string; homePhone: string; workPhone: string }[];
+  references: ReferenceEntry[];
   phone: string;
   email: string;
   address: string;
@@ -22,32 +35,32 @@ export type ScholarshipFormData = {
   declarationAccepted: boolean;
 };
 
-export type ApiResponse = {
+export type ScholarshipSubmitResponse = {
   success: boolean;
-  message: string;
   applicationId?: string;
+  message?: string;
 };
-
-const API_URL = "/api/scholarship";
 
 export async function submitScholarshipApplication(
   data: ScholarshipFormData
-): Promise<ApiResponse> {
-  // TODO: uncomment when backend is ready
-  // const response = await fetch(API_URL, {
-  //   method: "POST",
-  //   headers: { "Content-Type": "application/json" },
-  //   body: JSON.stringify(data),
-  // });
-  // if (!response.ok) throw new Error("Server error");
-  // return response.json();
+): Promise<ScholarshipSubmitResponse> {
+  const res = await fetch("/api/scholarship", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
 
-  // ── MOCK (remove when backend is ready) ──
-  console.log("📋 Scholarship form submitted:", data);
-  await new Promise((res) => setTimeout(res, 1500));
+  const json = await res.json().catch(() => ({}));
+
+  if (!res.ok) {
+    return {
+      success: false,
+      message: json?.error || "Submission failed. Please try again.",
+    };
+  }
+
   return {
     success: true,
-    message: "Application submitted successfully.",
-    applicationId: `BPS-${Date.now()}`,
+    applicationId: json.applicationId,
   };
 }

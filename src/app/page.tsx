@@ -17,7 +17,7 @@ export default function Home() {
 <section className="relative overflow-hidden text-pine min-h-[calc(100vh-220px)] flex items-center py-16">
   <div className="absolute inset-0">
     <Image
-      src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1920&q=80"
+      src="/bannerhero.png"
       alt=""
       fill
       priority
